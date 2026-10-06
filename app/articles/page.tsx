@@ -1,5 +1,7 @@
-import Link from "next/link";
+
 import { getArticles } from "@/app/lib/articles";
+import ContentCard from "@/app/components/ContentCard";
+
 
 export default function Articles() {
   const articles = getArticles();
@@ -21,31 +23,18 @@ export default function Articles() {
           observe, reason, and understand the world.
         </p>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          {articles.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/articles/${article.slug}`}
-              className="group rounded-2xl border border-neutral-800 p-8 transition hover:border-neutral-600"
-            >
-              <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
-                {article.category}
-              </p>
-
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight">
-                {article.title}
-              </h2>
-
-              <p className="mt-4 leading-7 text-neutral-400">
-                {article.description}
-              </p>
-
-              <p className="mt-8 text-sm text-neutral-500 transition group-hover:text-white">
-                Read article →
-              </p>
-            </Link>
-          ))}
-        </div>
+      <div className="mt-16 grid gap-6 md:grid-cols-2">
+        {articles.map((article) => (
+           <ContentCard
+       key={article.slug}
+        href={`/articles/${article.slug}`}
+        label={article.category}
+       title={article.title}
+       description={article.description}
+       action="Read article"
+    />
+  ))}
+</div>
 
       </div>
     </main>
