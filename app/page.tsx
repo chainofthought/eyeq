@@ -1,4 +1,14 @@
+import { getArticles } from "@/app/lib/articles";
+import { getCases } from "@/app/lib/cases";
+import { getDetectives } from "@/app/lib/detectives";
 export default function Home() {
+  const articles = getArticles();
+  const cases = getCases();
+  const detectives = getDetectives();
+
+  const featuredArticle = articles[0];
+  const featuredCase = cases[0];
+  const featuredDetective = detectives[0]; 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       <section className="mx-auto grid min-h-[80vh] max-w-6xl items-center gap-16 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr]">
@@ -36,7 +46,82 @@ export default function Home() {
         </div>
             </section>
 
-      <section className="border-t border-neutral-800">
+            <section className="border-t border-neutral-800">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+            From the EyeQ Archive
+          </p>
+
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight">
+            Explore the minds behind the mystery.
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <a
+              href={`/articles/${featuredArticle.slug}`}
+              className="group border border-neutral-800 p-8 transition hover:border-neutral-600"
+            >
+              <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+                {featuredArticle.category}
+              </p>
+
+              <h3 className="mt-5 text-2xl font-semibold tracking-tight">
+                {featuredArticle.title}
+              </h3>
+
+              <p className="mt-4 leading-7 text-neutral-400">
+                {featuredArticle.description}
+              </p>
+
+              <p className="mt-8 text-sm text-neutral-500 transition group-hover:text-white">
+                Read article →
+              </p>
+            </a>
+
+            <a
+              href={`/cases/${featuredCase.slug}`}
+              className="group border border-neutral-800 p-8 transition hover:border-neutral-600"
+            >
+              <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+                {featuredCase.category}
+              </p>
+
+              <h3 className="mt-5 text-2xl font-semibold tracking-tight">
+                {featuredCase.title}
+              </h3>
+
+              <p className="mt-4 leading-7 text-neutral-400">
+                {featuredCase.description}
+              </p>
+
+              <p className="mt-8 text-sm text-neutral-500 transition group-hover:text-white">
+                Investigate case →
+              </p>
+            </a>
+
+            <a
+              href={`/detectives/${featuredDetective.slug}`}
+              className="group border border-neutral-800 p-8 transition hover:border-neutral-600"
+            >
+              <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+                {featuredDetective.type}
+              </p>
+
+              <h3 className="mt-5 text-2xl font-semibold tracking-tight">
+                {featuredDetective.name}
+              </h3>
+
+              <p className="mt-4 leading-7 text-neutral-400">
+                {featuredDetective.description}
+              </p>
+
+              <p className="mt-8 text-sm text-neutral-500 transition group-hover:text-white">
+                Study detective →
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
         <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="grid gap-12 md:grid-cols-3">
             <div>
@@ -67,7 +152,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      
             <section className="border-t border-neutral-800">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">

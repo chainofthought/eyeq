@@ -3,9 +3,27 @@ title: "The Locked Room"
 description: "A man is found dead inside a locked study. Three people were in the house. One of them is lying."
 category: "Deduction"
 difficulty: "Intermediate"
+
+suspects:
+  - name: "Mara Voss"
+    role: "Wife"
+  - name: "Daniel Reed"
+    role: "Business Partner"
+  - name: "Victor Hale"
+    role: "Housekeeper"
+
+correctAnswer: "Victor Hale"
+
+criticalClue: "The wet footprint beside the desk."
+
+whyItMatters: "Victor claimed he was upstairs cleaning the guest rooms, yet the footprint suggests someone had recently been near a wet surface. His completely dry shoes make his story suspicious."
+
+principle: "Evidence beats assumptions."
+
+explanation: "Victor's story conflicts with the physical evidence. The wet footprint places someone near the study, while Victor's claim puts him upstairs. His completely dry shoes make that explanation difficult to accept."
 ---
 
-# The Locked Room
+# The Case
 
 At 10:30 PM, Elias Voss was found dead inside his study.
 
@@ -16,20 +34,6 @@ The only window was closed and latched.
 No weapon was found inside the room.
 
 Three people were in the house that night.
-
-## The Suspects
-
-**Mara Voss — Wife**
-
-She said she was in the kitchen preparing tea from 10:00 PM until she heard a scream at 10:30.
-
-**Daniel Reed — Business Partner**
-
-He said he was in the library reading. He claimed he never left the room.
-
-**Victor Hale — Housekeeper**
-
-He said he was upstairs cleaning the guest rooms.
 
 ## The Evidence
 
@@ -42,15 +46,3 @@ Investigators noticed several details:
 - The study door was locked from the inside.
 - The housekeeper's shoes were completely dry.
 - Daniel's book was found open to the same page he claimed he had been reading for thirty minutes.
-
-## The Question
-
-Someone's story doesn't add up.
-
-**Who is lying?**
-
-Don't rush to the answer.
-
-Look at the evidence.
-
-What detail doesn't belong?
