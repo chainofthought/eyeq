@@ -37,3 +37,13 @@ export default async function ArticlePage({
     </main>
   );
 }
+
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+  const { getArticles } = await import("@/app/lib/articles");
+
+  return getArticles().map((article) => ({
+    slug: article.slug,
+  }));
+}

@@ -1,4 +1,13 @@
-import { getCase } from "@/app/lib/cases";
+import { getCase, getCases } from "@/app/lib/cases";
+
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+  return getCases().map((item) => ({
+    slug: item.slug,
+  }));
+}
+
 import InteractiveCase from "@/app/components/InteractiveCase";
 
 export default async function CasePage({

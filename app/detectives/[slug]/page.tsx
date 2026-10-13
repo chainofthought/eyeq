@@ -1,5 +1,12 @@
-import { getDetective } from "@/app/lib/detectives";
+import { getDetective, getDetectives } from "@/app/lib/detectives";
 
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+  return getDetectives().map((item) => ({
+    slug: item.slug,
+  }));
+}
 export default async function DetectivePage({
   params,
 }: {
@@ -37,3 +44,4 @@ export default async function DetectivePage({
     </main>
   );
 }
+
