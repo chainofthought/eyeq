@@ -1,56 +1,36 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
 
-const casesDirectory = path.join(process.cwd(), "content/cases");
+import contentData from "./generated-content.json";
+
+const cases = contentData.cases;
 
 export async function getCase(slug: string) {
-  const fullPath = path.join(casesDirectory, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  const item = cases.find((entry) => entry.slug === slug);
 
-  const processedContent = await remark()
-    .use(html)
-    .process(content);
-
-  const suspects = Array.isArray(data.suspects)
-    ? data.suspects
-    : [];
+  if (!item) {
+    throw new Error(`Case not found: ${slug}`);
+  }
 
   return {
-    title: data.title,
-    description: data.description,
-    category: data.category,
-    difficulty: data.difficulty,
-    suspects,
-    correctAnswer: data.correctAnswer,
-    criticalClue: data.criticalClue,
-    whyItMatters: data.whyItMatters,
-    principle: data.principle,
-    explanation: data.explanation,
-    contentHtml: processedContent.toString(),
+    title: item.title,
+    description: item.description,
+    category: item.category,
+    difficulty: item.difficulty,
+    suspects: item.suspects ?? [],
+    correctAnswer: item.correctAnswer,
+    criticalClue: item.criticalClue,
+    whyItMatters: item.whyItMatters,
+    principle: item.principle,
+    explanation: item.explanation,
+    contentHtml: item.contentHtml,
   };
 }
 
 export function getCases() {
-  const files = fs.readdirSync(casesDirectory);
-
-  return files
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => {
-      const slug = file.replace(".md", "");
-      const fullPath = path.join(casesDirectory, file);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
-
-      return {
-        slug,
-        title: data.title,
-        description: data.description,
-        category: data.category,
-        difficulty: data.difficulty,
-      };
-    });
+  return cases.map((item) => ({
+    slug: item.slug,
+    title: item.title,
+    description: item.description,
+    category: item.category,
+    difficulty: item.difficulty,
+  }));
 }

@@ -1,0 +1,105 @@
+{
+  "articles": [
+    {
+      "slug": "observation",
+      "title": "The First Skill of a Detective: Observation",
+      "description": "Why observation comes before deduction, and how to train yourself to notice what others overlook.",
+      "category": "Observation",
+      "contentHtml": "<h1>The First Skill of a Detective: Observation</h1>\n<p>Most people look.</p>\n<p>Detectives observe.</p>\n<p>Observation is the ability to notice details, changes, patterns, and inconsistencies that other people overlook.</p>\n<p>It isn't about having extraordinary eyesight. It's about paying attention deliberately.</p>\n<h2>What to Practice</h2>\n<p>Start by entering an unfamiliar room and spending 30 seconds observing it.</p>\n<p>Then leave and write down everything you remember.</p>\n<p>Try to notice:</p>\n<ul>\n<li>Objects and their positions</li>\n<li>Changes in the environment</li>\n<li>People's behavior</li>\n<li>Unusual details</li>\n<li>Patterns and inconsistencies</li>\n</ul>\n<p>The goal isn't to remember everything.</p>\n<p>The goal is to become more aware of what you're actually seeing.</p>\n<h2>The EyeQ Principle</h2>\n<p><strong>You cannot reason from evidence you never noticed.</strong></p>\n<p>Observation comes before deduction.</p>\n"
+    }
+  ],
+  "cases": [
+    {
+      "slug": "the-locked-room",
+      "title": "The Locked Room",
+      "description": "A man is found dead inside a locked study. Three people were in the house. One of them is lying.",
+      "category": "Deduction",
+      "difficulty": "Intermediate",
+      "suspects": [
+        {
+          "name": "Mara Voss",
+          "role": "Wife"
+        },
+        {
+          "name": "Daniel Reed",
+          "role": "Business Partner"
+        },
+        {
+          "name": "Victor Hale",
+          "role": "Housekeeper"
+        }
+      ],
+      "correctAnswer": "Victor Hale",
+      "criticalClue": "The wet footprint beside the desk.",
+      "whyItMatters": "Victor claimed he was upstairs cleaning the guest rooms, yet the footprint suggests someone had recently been near a wet surface. His completely dry shoes make his story suspicious.",
+      "principle": "Evidence beats assumptions.",
+      "explanation": "Victor's story conflicts with the physical evidence. The wet footprint places someone near the study, while Victor's claim puts him upstairs. His completely dry shoes make that explanation difficult to accept.",
+      "contentHtml": "<h1>The Case</h1>\n<p>At 10:30 PM, Elias Voss was found dead inside his study.</p>\n<p>The door was locked from the inside.</p>\n<p>The only window was closed and latched.</p>\n<p>No weapon was found inside the room.</p>\n<p>Three people were in the house that night.</p>\n<h2>The Evidence</h2>\n<p>Investigators noticed several details:</p>\n<ul>\n<li>A cup of tea was sitting on Elias's desk.</li>\n<li>The tea was still warm.</li>\n<li>The fireplace was burning despite the warm evening.</li>\n<li>A wet footprint was found beside the desk.</li>\n<li>The study door was locked from the inside.</li>\n<li>The housekeeper's shoes were completely dry.</li>\n<li>Daniel's book was found open to the same page he claimed he had been reading for thirty minutes.</li>\n</ul>\n"
+    },
+    {
+      "slug": "the-missing-diamond",
+      "title": "The Missing Diamond",
+      "description": "A priceless diamond disappears during a dinner party. Four people had access to the room. One detail exposes the thief.",
+      "category": "Observation",
+      "difficulty": "Beginner",
+      "suspects": [
+        {
+          "name": "Clara Moore",
+          "role": "Collector"
+        },
+        {
+          "name": "James Carter",
+          "role": "Guest"
+        },
+        {
+          "name": "Helen Brooks",
+          "role": "Housekeeper"
+        },
+        {
+          "name": "Victor Lane",
+          "role": "Security Guard"
+        }
+      ],
+      "correctAnswer": "James Carter",
+      "criticalClue": "The fresh fingerprint on the inside of the study window.",
+      "whyItMatters": "James claimed he had never entered the study, yet his fingerprint was found on the inside of the window. The window had been opened from inside, contradicting his story.",
+      "principle": "Contradictions are evidence.",
+      "explanation": "James's statement conflicts with the physical evidence. A fresh fingerprint on the inside of the window places him inside the study, despite his claim that he never entered.",
+      "contentHtml": "<h1>The Case</h1>\n<p>At 9:15 PM, Clara Moore discovered that her famous blue diamond had disappeared from a locked display case in her study.</p>\n<p>The diamond had been seen inside the case only fifteen minutes earlier.</p>\n<p>There were no signs of forced entry.</p>\n<p>Four people had access to the house that evening.</p>\n<h2>The Evidence</h2>\n<p>Investigators discovered several details:</p>\n<ul>\n<li>The display case was still locked.</li>\n<li>No glass was broken.</li>\n<li>The study window was slightly open.</li>\n<li>A fresh fingerprint was found on the inside of the window.</li>\n<li>Rain had started outside at 8:50 PM.</li>\n<li>The carpet beneath the window was completely dry.</li>\n<li>James claimed he had never entered the study.</li>\n<li>Helen had cleaned the study earlier that afternoon.</li>\n<li>Victor was monitoring the front entrance throughout the evening.</li>\n</ul>\n"
+    }
+  ],
+  "detectives": [
+    {
+      "slug": "hercule-poirot",
+      "name": "Hercule Poirot",
+      "description": "A brilliant Belgian detective famous for psychological insight, meticulous observation, and the use of his little grey cells.",
+      "origin": "Agatha Christie",
+      "type": "Fictional",
+      "contentHtml": "<h1>Hercule Poirot</h1>\n<p>Hercule Poirot is one of the most famous detectives in fiction, created by Agatha Christie.</p>\n<p>Unlike detectives who rely heavily on physical investigation, Poirot often solves cases by studying people, reconstructing events, and understanding the psychology behind a crime.</p>\n<p>He believes that the smallest detail can reveal the structure of an entire mystery.</p>\n<h2>The Poirot Method</h2>\n<p>Poirot's investigations rely heavily on:</p>\n<ul>\n<li>Observation</li>\n<li>Psychological analysis</li>\n<li>Logical reasoning</li>\n<li>Questioning</li>\n<li>Contradiction detection</li>\n<li>Reconstruction of events</li>\n<li>Understanding human motives</li>\n</ul>\n<p>Rather than simply asking what happened, Poirot asks why someone would behave in a particular way.</p>\n<h2>His Greatest Strength</h2>\n<p>Poirot understands that a crime is ultimately a human event.</p>\n<p>People have motives.</p>\n<p>People make mistakes.</p>\n<p>People contradict themselves.</p>\n<p>And people often reveal more than they intend to.</p>\n<p>His method demonstrates an important principle:</p>\n<p><strong>Understanding the person can be as important as understanding the evidence.</strong></p>\n<h2>The EyeQ Lesson</h2>\n<p>Poirot represents another central EyeQ idea:</p>\n<p><strong>Details become powerful when you understand their relationships.</strong></p>\n<p>Observation gives you the clues.</p>\n<p>Reasoning connects them.</p>\n<p>Deduction turns them into an explanation.</p>\n"
+    },
+    {
+      "slug": "patrick-jane",
+      "name": "Patrick Jane",
+      "description": "A former fake psychic turned independent consultant, known for extraordinary observation, psychological manipulation, and unconventional deduction.",
+      "origin": "The Mentalist",
+      "type": "Fictional",
+      "contentHtml": "<h1>Patrick Jane</h1>\n<p>Patrick Jane is the central character of <em>The Mentalist</em>, known for solving crimes through observation, psychological insight, deception, and careful deduction.</p>\n<p>He rarely behaves like a conventional detective.</p>\n<p>Instead of relying primarily on forensic evidence or traditional investigative procedures, Jane studies people.</p>\n<p>He watches what they say, how they behave, what they avoid, and how they react under pressure.</p>\n<h2>The Jane Method</h2>\n<p>Jane's greatest weapon isn't simply intelligence.</p>\n<p>It's <strong>attention</strong>.</p>\n<p>He constantly looks for small inconsistencies between what people say and what their behavior reveals.</p>\n<p>He uses:</p>\n<ul>\n<li>Observation</li>\n<li>Body language</li>\n<li>Psychological manipulation</li>\n<li>Misdirection</li>\n<li>Memory</li>\n<li>Pattern recognition</li>\n<li>Social engineering</li>\n<li>Deductive reasoning</li>\n</ul>\n<h2>His Greatest Strength</h2>\n<p>Jane understands that people reveal information constantly, often without realizing it.</p>\n<p>A hesitation.</p>\n<p>A glance.</p>\n<p>A change in tone.</p>\n<p>A contradiction.</p>\n<p>A strangely specific detail.</p>\n<p>To Jane, these aren't meaningless behaviors.</p>\n<p>They're clues.</p>\n<h2>The EyeQ Lesson</h2>\n<p>Patrick Jane represents one of EyeQ's central ideas:</p>\n<p><strong>People are evidence.</strong></p>\n<p>Learning to observe people doesn't mean assuming you can read their minds.</p>\n<p>It means learning to notice behavior, establish patterns, identify inconsistencies, and form hypotheses without confusing them for facts.</p>\n"
+    },
+    {
+      "slug": "rust-cohle",
+      "name": "Rust Cohle",
+      "description": "A deeply analytical detective known for philosophical thinking, relentless investigation, and an ability to see patterns others overlook.",
+      "origin": "True Detective",
+      "type": "Fictional",
+      "contentHtml": "<h1>Rust Cohle</h1>\n<p>Rust Cohle is a detective from <em>True Detective</em>, known for his intense intelligence, philosophical worldview, and unconventional approach to investigation.</p>\n<p>He doesn't simply investigate what happened.</p>\n<p>He tries to understand the deeper structure behind human behavior, violence, and motive.</p>\n<p>Cohle is patient, obsessive, and extremely attentive to details that others dismiss.</p>\n<h2>The Cohle Method</h2>\n<p>Cohle's investigative style combines:</p>\n<ul>\n<li>Observation</li>\n<li>Pattern recognition</li>\n<li>Psychological analysis</li>\n<li>Interrogation</li>\n<li>Logical reasoning</li>\n<li>Evidence reconstruction</li>\n<li>Relentless questioning</li>\n</ul>\n<p>He is particularly interested in contradictions.</p>\n<p>When someone's story doesn't fit the evidence, Cohle doesn't simply accept the explanation.</p>\n<p>He keeps digging.</p>\n<h2>His Greatest Strength</h2>\n<p>Cohle's greatest strength is his ability to question assumptions.</p>\n<p>He doesn't automatically accept the obvious explanation.</p>\n<p>Instead, he asks:</p>\n<p><strong>What if the story everyone believes is wrong?</strong></p>\n<p>That mindset allows him to notice connections between seemingly unrelated pieces of evidence.</p>\n<h2>The EyeQ Lesson</h2>\n<p>Rust Cohle represents one of EyeQ's most important principles:</p>\n<p><strong>Never confuse the first explanation with the truth.</strong></p>\n<p>Good investigation requires curiosity.</p>\n<p>Better investigation requires skepticism.</p>\n<p>The strongest investigators are willing to question even their own conclusions.</p>\n"
+    },
+    {
+      "slug": "sherlock-holmes",
+      "name": "Sherlock Holmes",
+      "description": "The legendary consulting detective famous for observation, deduction, forensic reasoning, and extraordinary attention to detail.",
+      "origin": "Arthur Conan Doyle",
+      "type": "Fictional",
+      "contentHtml": "<h1>Sherlock Holmes</h1>\n<p>Sherlock Holmes is perhaps the most influential detective in fiction.</p>\n<p>Created by Arthur Conan Doyle, Holmes is famous for solving seemingly impossible mysteries through observation, deduction, scientific reasoning, and careful examination of evidence.</p>\n<p>He sees information where others see ordinary details.</p>\n<h2>The Holmes Method</h2>\n<p>Holmes relies on:</p>\n<ul>\n<li>Observation</li>\n<li>Deductive reasoning</li>\n<li>Scientific analysis</li>\n<li>Forensic examination</li>\n<li>Pattern recognition</li>\n<li>Knowledge</li>\n<li>Hypothesis testing</li>\n<li>Careful questioning</li>\n</ul>\n<p>His investigations often begin with something extremely small.</p>\n<p>A mark on a shoe.</p>\n<p>Ash from a cigarette.</p>\n<p>A particular type of handwriting.</p>\n<p>A missing button.</p>\n<p>To Holmes, these details are evidence.</p>\n<h2>His Greatest Strength</h2>\n<p>Holmes understands that observation is only useful when combined with reasoning.</p>\n<p>Seeing a clue is one thing.</p>\n<p>Understanding what that clue means is another.</p>\n<p>His greatest skill is connecting small observations into a larger explanation.</p>\n<h2>The EyeQ Lesson</h2>\n<p>Sherlock Holmes represents the foundation of the detective mindset:</p>\n<p><strong>Notice what others overlook.</strong></p>\n<p>But observation alone isn't enough.</p>\n<p>A detective must distinguish between:</p>\n<p><strong>What you observed.</strong></p>\n<p><strong>What you inferred.</strong></p>\n<p><strong>What you actually know.</strong></p>\n<p>That distinction is at the heart of good reasoning.</p>\n"
+    }
+  ]
+}

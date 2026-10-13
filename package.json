@@ -1,10 +1,11 @@
+
 {
   "name": "eyeq",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/generate-content.mjs && next dev",
+    "build": "node scripts/generate-content.mjs && next build",
     "start": "next start",
     "lint": "eslint"
   },

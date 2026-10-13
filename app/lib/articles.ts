@@ -1,48 +1,28 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
 
-const articlesDirectory = path.join(process.cwd(), "content/articles");
+import contentData from "./generated-content.json";
+
+const articles = contentData.articles;
 
 export async function getArticle(slug: string) {
-  const fullPath = path.join(articlesDirectory, `${slug}.md`);
+  const article = articles.find((item) => item.slug === slug);
 
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-
-  const { data, content } = matter(fileContents);
-
-  const processedContent = await remark()
-    .use(html)
-    .process(content);
+  if (!article) {
+    throw new Error(`Article not found: ${slug}`);
+  }
 
   return {
-    title: data.title,
-    description: data.description,
-    category: data.category,
-    contentHtml: processedContent.toString(),
+    title: article.title,
+    description: article.description,
+    category: article.category,
+    contentHtml: article.contentHtml,
   };
 }
 
 export function getArticles() {
-  const files = fs.readdirSync(articlesDirectory);
-
-  return files
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => {
-      const slug = file.replace(".md", "");
-
-      const fullPath = path.join(articlesDirectory, file);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-
-      const { data } = matter(fileContents);
-
-      return {
-        slug,
-        title: data.title,
-        description: data.description,
-        category: data.category,
-      };
-    });
+  return articles.map((article) => ({
+    slug: article.slug,
+    title: article.title,
+    description: article.description,
+    category: article.category,
+  }));
 }
