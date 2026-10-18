@@ -1,6 +1,7 @@
 ---
 title: "The First Skill of a Detective: Observation"
 description: "Why observation comes before deduction, and how to train yourself to notice what others overlook."
+pillar: "Training"
 category: "Observation"
 ---
 

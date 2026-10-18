@@ -13,6 +13,7 @@ export async function getArticle(slug: string) {
   return {
     title: article.title,
     description: article.description,
+    pillar: article.pillar,
     category: article.category,
     contentHtml: article.contentHtml,
   };
@@ -23,6 +24,7 @@ export function getArticles() {
     slug: article.slug,
     title: article.title,
     description: article.description,
+    pillar: article.pillar,
     category: article.category,
   }));
 }

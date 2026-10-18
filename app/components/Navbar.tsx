@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -18,17 +19,13 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="flex gap-6 text-sm text-neutral-400">
-          <Link href="/articles" className="transition hover:text-white">
-            Articles
+        <div className="flex flex-wrap items-center gap-6 text-sm text-neutral-400">
+          <Link href="/culture" className="transition hover:text-white">
+            Culture
           </Link>
 
-          <Link href="/cases" className="transition hover:text-white">
-            Cases
-          </Link>
-
-          <Link href="/detectives" className="transition hover:text-white">
-            Detectives
+          <Link href="/training" className="transition hover:text-white">
+            Training
           </Link>
 
           <Link href="/about" className="transition hover:text-white">

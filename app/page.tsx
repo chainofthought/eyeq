@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getArticles } from "@/app/lib/articles";
 import { getCases } from "@/app/lib/cases";
 import { getDetectives } from "@/app/lib/detectives";
@@ -13,9 +14,20 @@ export default function Home() {
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       <section className="mx-auto grid min-h-[80vh] max-w-6xl items-center gap-16 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="max-w-4xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-neutral-500">
-            The world of mystery, investigation & deduction
-          </p>
+          <div className="mb-8 flex items-center gap-4">
+      <Image
+    src="/eyeq-logo.png"
+    alt="EyeQ logo"
+    width={64}
+    height={64}
+    priority
+    className="h-16 w-16 object-contain"
+  />
+
+  <p className="text-sm uppercase tracking-[0.4em] text-neutral-500">
+    The world of mystery, investigation & deduction
+  </p>
+</div>
 
           <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-7xl">
             Train your mind.
