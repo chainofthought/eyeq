@@ -1,7 +1,9 @@
 
 "use client";
 
+
 import { useState } from "react";
+import Link from "next/link";
 
 type Suspect = {
   name: string;
@@ -305,6 +307,46 @@ export default function InteractiveCase({
                     The correct answer: {correctAnswer}.
                   </p>
                 </div>
+                
+<div className="mt-8 grid gap-4 sm:grid-cols-2">
+  <Link
+    href="/cases"
+    className="border border-neutral-700 p-6 transition hover:border-neutral-500"
+  >
+    <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+      Keep investigating
+    </p>
+    <h3 className="mt-3 text-xl font-semibold">
+      Try another case →
+    </h3>
+    <p className="mt-3 leading-7 text-neutral-400">
+      Put your reasoning to the test with another challenge.
+    </p>
+  </Link>
+
+  <Link
+    href="/training"
+    className="border border-neutral-800 p-6 transition hover:border-neutral-600"
+  >
+    <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+      Build your skills
+    </p>
+    <h3 className="mt-3 text-xl font-semibold">
+      Explore Training →
+    </h3>
+    <p className="mt-3 leading-7 text-neutral-400">
+      Develop the observation and reasoning skills behind good investigations.
+    </p>
+  </Link>
+</div>
+
+<Link
+  href="/"
+  className="mt-6 inline-block text-sm text-neutral-500 transition hover:text-white"
+>
+  ← Return to EyeQ home
+</Link>
+
               </>
             )}
           </div>

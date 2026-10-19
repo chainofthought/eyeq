@@ -3,7 +3,6 @@ title: "The Locked Room"
 description: "A man is found dead inside a locked study. Three people were in the house. One of them is lying."
 category: "Deduction"
 difficulty: "Intermediate"
-
 suspects:
   - name: "Mara Voss"
     role: "Wife"
@@ -11,19 +10,14 @@ suspects:
     role: "Business Partner"
   - name: "Victor Hale"
     role: "Housekeeper"
-
 correctAnswer: "Victor Hale"
-
 criticalClue: "The wet footprint beside the desk."
-
 whyItMatters: "Victor claimed he was upstairs cleaning the guest rooms, yet the footprint suggests someone had recently been near a wet surface. His completely dry shoes make his story suspicious."
-
 principle: "Evidence beats assumptions."
-
-explanation: "Victor's story conflicts with the physical evidence. The wet footprint places someone near the study, while Victor's claim puts him upstairs. His completely dry shoes make that explanation difficult to accept."
+explanation: "Victor's story conflicts with the physical evidence. The wet footprint suggests someone had recently been near the desk, while Victor claimed he was upstairs. His shoes being completely dry makes his explanation suspicious."
 ---
 
-# The Case
+## The Case
 
 At 10:30 PM, Elias Voss was found dead inside his study.
 
