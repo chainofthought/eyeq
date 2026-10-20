@@ -2,14 +2,13 @@
 import { getArticles } from "@/app/lib/articles";
 import ContentCard from "@/app/components/ContentCard";
 
-
 export default function Articles() {
   const articles = getArticles();
+
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       <div className="mx-auto max-w-6xl px-6 py-16">
-
         <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
           EyeQ
         </p>
@@ -23,19 +22,19 @@ export default function Articles() {
           observe, reason, and understand the world.
         </p>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-2">
-        {articles.map((article) => (
-           <ContentCard
-       key={article.slug}
-        href={`/articles/${article.slug}`}
-        label={article.category}
-       title={article.title}
-       description={article.description}
-       action="Read article"
-    />
-  ))}
-</div>
-
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
+          {articles.map((article) => (
+            <ContentCard
+              key={article.slug}
+              href={`/articles/${article.slug}`}
+              label={article.category}
+              title={article.title}
+              description={article.description}
+              action="Read article"
+              meta={`${article.readingTime} min read`}
+            />
+          ))}
+        </div>
       </div>
     </main>
   );

@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { getArticle, getArticles } from "@/app/lib/articles";
 
 export const dynamic = "force-static";
@@ -15,13 +16,22 @@ export default async function ArticlePage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params;
-  const article = await getArticle(slug);
+const { slug } = await params;
+
+let article;
+
+try {
+  article = await getArticle(slug);
+} catch {
+  notFound();
+}
+
+  const showTableOfContents = article.tableOfContents.length >= 3;
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       <article className="mx-auto max-w-4xl px-6 py-20">
-        <header className="mb-16">
+        <header className="mb-12">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
             {article.category}
           </p>
@@ -34,8 +44,39 @@ export default async function ArticlePage({
             {article.description}
           </p>
 
+          <p className="mt-5 text-sm text-neutral-500">
+            {article.readingTime} min read
+          </p>
+
           <div className="mt-8 h-px w-full bg-neutral-800" />
         </header>
+
+        {showTableOfContents && (
+          <nav
+            aria-label="Table of contents"
+            className="mb-12 border border-neutral-800 p-6 sm:p-8"
+          >
+            <h2 className="text-sm uppercase tracking-[0.25em] text-neutral-400">
+              In this article
+            </h2>
+
+            <ol className="mt-5 space-y-3">
+              {article.tableOfContents.map((item) => (
+                <li
+                  key={item.id}
+                  className={item.level === 3 ? "pl-5" : ""}
+                >
+                  <a
+                    href={`#${item.id}`}
+                    className="text-neutral-400 transition hover:text-white"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
 
         <div
           className="article-content"
@@ -65,9 +106,7 @@ export default async function ArticlePage({
                 Keep learning
               </p>
 
-              <h3 className="mt-4 text-xl font-semibold">
-                Training
-              </h3>
+              <h3 className="mt-4 text-xl font-semibold">Training</h3>
 
               <p className="mt-3 leading-7 text-neutral-400">
                 Develop observation, deduction, and investigative
