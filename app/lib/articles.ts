@@ -15,6 +15,7 @@ export async function getArticle(slug: string) {
     description: article.description,
     pillar: article.pillar,
     category: article.category,
+    tags: "tags" in article ? article.tags ?? [] : [],
     contentHtml: article.contentHtml,
   };
 }
@@ -26,5 +27,6 @@ export function getArticles() {
     description: article.description,
     pillar: article.pillar,
     category: article.category,
+    tags: "tags" in article ? article.tags ?? [] : [],
   }));
 }
